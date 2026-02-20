@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מידעון מעברים - אורט זאב בוים</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004a99;
+            --secondary: #00d1b2;
+            --bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --white: #ffffff;
+            --dark: #2c3e50;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        body { font-family: 'Assistant', sans-serif; margin: 0; background: var(--bg); background-attachment: fixed; color: var(--dark); line-height: 1.6; }
+        header { background-color: rgba(255, 255, 255, 0.95); padding: 40px 20px; text-align: center; border-bottom: 6px solid var(--primary); box-shadow: var(--shadow); }
+        .logo-img { max-width: 280px; height: auto; margin-bottom: 15px; }
+        nav { background-color: var(--white); padding: 15px; position: sticky; top: 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+        .nav-link { text-decoration: none; color: var(--primary); font-weight: bold; padding: 6px 14px; border-radius: 50px; border: 2px solid var(--primary); transition: 0.3s; font-size: 0.85rem; }
+        .nav-link:hover { background: var(--primary); color: white; }
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        .slide-section { background: var(--white); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        
+        .collapsible-btn { 
+            background-color: var(--white); 
+            color: var(--dark); 
+            cursor: pointer; 
+            padding: 22px; 
+            width: 100%; 
+            border: none; 
+            text-align: right; 
+            font-size: 1.25rem; 
+            font-weight: 700; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-right: 10px solid var(--primary);
+            outline: none;
+        }
+
+        .active, .collapsible-btn:hover { background-color: #f0f7ff; }
+        .collapsible-btn:after { content: '\25BC'; font-size: 0.8rem; color: var(--primary); transition: 0.3s; }
+        .active:after { content: '\25B2'; }
+
+        .content { 
+            padding: 0 40px; 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.4s ease-out; 
+            background-color: #fafafa; 
+        }
+        
+        .content-inner { padding: 25px 0; border-top: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background: var(--primary); color: white; }
+        .main-cta-btn { display: inline-block; background: linear-gradient(135deg, #ff4b2b, #ff416c); color: white; padding: 18px 40px; font-size: 1.3rem; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3); transition: 0.3s; margin: 20px 0; }
+        .school-link { color: var(--primary); text-decoration: underline; font-weight: bold; }
+        footer { background: var(--dark); color: white; padding: 50px 20px; text-align: center; }
+        .highlight-box { background: #fff3cd; padding: 15px; border-right: 5px solid #ffc107; margin: 15px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="image.png" alt="לוגו אורט זאב בוים" class="logo-img">
+    <h1>מעברים: לקראת כיתה י'</h1>
+    <p>מידעון לתלמידים ולהורים | שנת הלימודים תשפ"ז</p>
+    <p>אורט ע"ש זאב בוים – קריית חינוך למצוינות מדעית וטכנולוגית</p>
+</header>
+
+<nav>
+    <a href="#bagrut" class="nav-link">בגרות</a>
+    <a href="#paths" class="nav-link">נתיבים</a>
+    <a href="#selection" class="nav-link">הגברות</a>
+    <a href="#criteria" class="nav-link">קריטריונים</a>
+    <a href="#team" class="nav-link">צוות ולו"ז</a>
+</nav>
+
+<div class="container">
+
+    <div class="slide-section" id="bagrut">
+        <button class="collapsible-btn">היעד: תעודת בגרות איכותית</button>
+        <div class="content">
+            <div class="content-inner">
+                <ul>
+                    <li><strong>צבירה</strong>: מינימום 21 יחידות לימוד.</li>
+                    <li><strong>מקצועות חובה</strong>: תנ"ך, ספרות, היסטוריה, עברית, אזרחות (2 יח"ל כ"א).</li>
+                    <li><strong>מתמטיקה ואנגלית</strong>: 3, 4, או 5 יח"ל.</li>
+                    <li><strong>התמחות אישית</strong>: לפחות מקצוע מורחב אחד בהיקף 5 יח"ל.</li>
+                    <li><strong>מעורבות חברתית</strong>: תכנית התפתחות אישית (60 שעות בשנה).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="paths" style="text-align:center; color: var(--primary);">נתיבי הלימוד בהתאמה אישית</h2>
+    
+    <div class="slide-section">
+        <button class="collapsible-btn">נתיב 1: כיתת מופת</button>
+        <div class="content">
+            <div class="content-inner">
+                <ul>
+                    <li><strong>דרישות</strong>: 4-5 יח"ל מתמטיקה, 5 יח"ל אנגלית.</li>
+                    <li><strong>זכאות לתעודת "בוגר כיתת מופת מדעית"</strong>: מוענקת למגבירים שני מקצועות מתוך: פיזיקה, מדעי המחשב, כימיה או ביולוגיה.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-section">
+        <button class="collapsible-btn">נתיב 2: כיתה עיונית</button>
+        <div class="content">
+            <div class="content-inner">
+                <strong>תנאי קבלה:</strong>
+                <ul>
+                    <li>ממוצע ציונים 75 ומעלה.</li>
+                    <li>מתמטיקה: הקבצה א'.</li>
+                    <li>אנגלית: ציון 70 ומעלה.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-section">
+        <button class="collapsible-btn">נתיב 3: כיתת מב"ר</button>
+        <div class="content">
+            <div class="content-inner">
+                <ul>
+                    <li>סל שעות מורחב.</li>
+                    <li><strong>קבלה</strong>: ממוצע 60+, חיובי בהקבצה א' או 70+ בב'.</li>
+                    <li>התנהגות נאותה, ביקור סדיר ומוטיבציה גבוהה.</li>
+                    <li><strong>הגברה</strong>: ניהול עסקי.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-section">
+        <button class="collapsible-btn">נתיב 4: כיתת אומ"ץ / אתגר</button>
+        <div class="content">
+            <div class="content-inner">
+                <ul>
+                    <li>סל שעות מורחב וליווי מתרגל.</li>
+                    <li>התנהגות נאותה, ביקור סדיר ומוטיבציה גבוהה.</li>
+                    <li><strong>הגברה</strong>: ניהול עסקי + תעודה טכנולוגית.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-section" id="selection">
+        <button class="collapsible-btn">אשכולות בחירה והמלצת בגרותטק</button>
+        <div class="content">
+            <div class="content-inner">
+                <table>
+                    <tr><th>אשכול א' (בחירה אחת)</th><th>אשכול ב' (בחירה אחת)</th></tr>
+                    <tr><td>פיזיקה, ניהול עסקי, ביולוגיה</td><td>אלקטרוניקה (10 יח"ל), כימיה, קולנוע, מדעי המחשב (10 יח"ל)</td></tr>
+                </table>
+                <div class="highlight-box">
+                    <strong>המלצת בגרותטק</strong>: מומלץ לבחור בפיזיקה או מדעי המחשב כחלק מדרישות הזכאות.
+                </div>
+                <p style="text-align: center;">לפרטים אודות ההגברות השונות יש להיכנס ל <a href="https://boim.ort.org.il/" class="school-link" target="_blank">אתר בית הספר</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-section" id="criteria">
+        <button class="collapsible-btn">קריטריונים לשיבוץ (מתמטיקה ואנגלית)</button>
+        <div class="content">
+            <div class="content-inner">
+                <strong>מתמטיקה:</strong>
+                <ul>
+                    <li>5 יח"ל: מופת 70+ או הקבצה א' 80+.</li>
+                    <li>4 יח"ל: הקבצה א' 55-74 או הקבצה א'1 75+.</li>
+                    <li>3 יח"ל: הקבצה א'1 מתחת ל-74 או הקבצה ב'.</li>
+                </ul>
+                <hr>
+                <strong>אנגלית:</strong>
+                <ul>
+                    <li>5 יח"ל: מופת 70+ או הקבצה א' 80+.</li>
+                    <li>4 יח"ל: הקבצה א' ציון חיובי או הקבצה ב' 80+.</li>
+                    <li>3 יח"ל: הקבצה ב' ציון חיובי.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-section" id="team">
+        <button class="collapsible-btn">לוח זמנים וצוות בית הספר</button>
+        <div class="content">
+            <div class="content-inner">
+                <strong>הצוות לדרך:</strong>
+                <ul>
+                    <li><strong>חניאל בן ברוך – מנהלת החטיבה העליונה</strong>.</li>
+                    <li>זיו זקסר – רכזת פדגוגית ומצוינות.</li>
+                    <li>אביעד כהן – יועץ השכבה.</li>
+                    <li>רכזי המקצועות וההגברות השונים.</li>
+                </ul>
+                <hr>
+                <strong>לוח זמנים:</strong>
+                <ol>
+                    <li>שלב 1: חשיפה והיכרות עם רכזי המקצועות.</li>
+                    <li>שלב 2: למידה ועיון במידעון זה.</li>
+                    <li>שלב 3: מילוי טופס בחירה מקוון עד ה-15.04.2026.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="https://forms.gle/Q96194oTCgiJdUXeA" class="main-cta-btn" target="_blank">למילוי טופס הבחירה המקוון</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>אורט ע"ש זאב בוים – קריית גת | אהוד בן גרא 9</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var coll = document.getElementsByClassName("collapsible-btn");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
